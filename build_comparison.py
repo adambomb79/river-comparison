@@ -23,6 +23,11 @@ jobs:
       - name: Run generator
         run: python build_comparison.py
 
+      - name: Show files
+        run: |
+          pwd
+          ls -la
+
       - name: Commit updated comparison.json
         run: |
           git config user.name "github-actions[bot]"
