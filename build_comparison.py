@@ -8,25 +8,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
 
     steps:
       - name: Check out repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Run generator
         run: python build_comparison.py
-
-      - name: Show files
-        run: |
-          pwd
-          ls -la
 
       - name: Commit updated comparison.json
         run: |
