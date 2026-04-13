@@ -1,43 +1,101 @@
 {
-  "generated_at": "2026-04-12T23:37:18.146012Z",
+  "generated_at": "2026-04-13T01:50:30.781915Z",
   "site": "05283500",
   "parameter": "00065",
+  "days": 14,
   "labels": [
+    "3/31",
+    "4/1",
+    "4/2",
+    "4/3",
+    "4/4",
+    "4/5",
     "4/6",
     "4/7",
     "4/8",
     "4/9",
     "4/10",
     "4/11",
-    "4/12"
+    "4/12",
+    "4/13"
   ],
   "avg": [
+    4.58,
+    4.58,
+    4.64,
+    4.58,
+    4.63,
+    4.69,
     4.7,
     4.74,
     4.82,
     4.88,
     4.97,
     5.13,
-    5.38
+    5.38,
+    6.02
   ],
   "min": [
+    4.51,
+    4.55,
+    4.55,
+    4.48,
+    4.59,
+    4.63,
     4.64,
     4.72,
     4.77,
     4.81,
     4.92,
     4.94,
-    4.92
+    4.92,
+    4.89
   ],
   "max": [
+    4.63,
+    4.63,
+    4.69,
+    4.67,
+    4.71,
+    4.76,
     4.78,
     4.77,
     4.92,
     4.91,
     5.01,
     5.34,
-    6.03
+    6.03,
+    7.93
   ],
   "successes": 3,
-  "failures": 0
+  "failures": 0,
+  "window_details": [
+    {
+      "years_back": 1,
+      "status": "ok",
+      "points": 1336,
+      "daily_points": 14,
+      "start": "2025-03-31",
+      "end": "2025-04-13",
+      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2025-03-31&endDT=2025-04-13"
+    },
+    {
+      "years_back": 2,
+      "status": "ok",
+      "points": 1341,
+      "daily_points": 14,
+      "start": "2024-03-31",
+      "end": "2024-04-13",
+      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2024-03-31&endDT=2024-04-13"
+    },
+    {
+      "years_back": 3,
+      "status": "ok",
+      "points": 1331,
+      "daily_points": 14,
+      "start": "2023-03-31",
+      "end": "2023-04-13",
+      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2023-03-31&endDT=2023-04-13"
+    }
+  ]
 }
