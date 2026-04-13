@@ -4,7 +4,8 @@ name: Update comparison JSON
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 10 * * *"
+    - cron: "1 0 * * *"
+      timezone: "America/Chicago"
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   
