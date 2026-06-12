@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-06-11T09:10:11.365189Z",
+  "generated_at": "2026-06-12T08:55:07.873266Z",
   "site": "05283500",
   "parameter": "00065",
   "days": 14,
   "labels": [
-    "5/29",
     "5/30",
     "5/31",
     "6/1",
@@ -17,10 +16,10 @@
     "6/8",
     "6/9",
     "6/10",
-    "6/11"
+    "6/11",
+    "6/12"
   ],
   "avg": [
-    5.98,
     5.89,
     5.79,
     5.68,
@@ -33,10 +32,10 @@
     5.85,
     5.89,
     5.84,
-    5.76
+    5.76,
+    5.73
   ],
   "min": [
-    5.62,
     5.45,
     5.37,
     5.19,
@@ -49,10 +48,10 @@
     4.82,
     4.82,
     4.68,
-    4.65
+    4.65,
+    4.68
   ],
   "max": [
-    6.56,
     6.55,
     6.49,
     6.48,
@@ -65,7 +64,8 @@
     7.81,
     7.95,
     7.95,
-    7.81
+    7.81,
+    7.71
   ],
   "successes": 3,
   "failures": 0,
@@ -75,27 +75,27 @@
       "status": "ok",
       "points": 1338,
       "daily_points": 14,
-      "start": "2025-05-29",
-      "end": "2025-06-11",
-      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2025-05-29&endDT=2025-06-11"
+      "start": "2025-05-30",
+      "end": "2025-06-12",
+      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2025-05-30&endDT=2025-06-12"
     },
     {
       "years_back": 2,
       "status": "ok",
       "points": 1339,
       "daily_points": 14,
-      "start": "2024-05-29",
-      "end": "2024-06-11",
-      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2024-05-29&endDT=2024-06-11"
+      "start": "2024-05-30",
+      "end": "2024-06-12",
+      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2024-05-30&endDT=2024-06-12"
     },
     {
       "years_back": 3,
       "status": "ok",
       "points": 1344,
       "daily_points": 14,
-      "start": "2023-05-29",
-      "end": "2023-06-11",
-      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2023-05-29&endDT=2023-06-11"
+      "start": "2023-05-30",
+      "end": "2023-06-12",
+      "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2023-05-30&endDT=2023-06-12"
     }
   ]
 }
