@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T09:23:35.120666Z",
+  "generated_at": "2026-06-29T13:17:50.366626Z",
   "site": "05283500",
   "parameter": "00065",
   "days": 14,
@@ -96,6 +96,18 @@
       "start": "2023-06-16",
       "end": "2023-06-29",
       "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05283500&parameterCd=00065&startDT=2023-06-16&endDT=2023-06-29"
+    }
+  ],
+  "dock_references": [
+    {
+      "date": "2026-06-03",
+      "label": "Dock move 26-01",
+      "level": 4.48
+    },
+    {
+      "date": "2026-06-28",
+      "label": "Dock move 26-02",
+      "level": 4.54
     }
   ]
 }
