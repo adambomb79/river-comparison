@@ -1,3 +1,4 @@
+
 import json
 from datetime import datetime, timedelta
 from urllib.request import urlopen
@@ -60,7 +61,7 @@ def pick_closest_to_midnight_per_day(points):
         picked.append(
             {
                 "date": best[0].strftime("%Y-%m-%d"),
-                "value": best[1],
+                "value": round(best[1], 2),
             }
         )
 
@@ -77,6 +78,24 @@ def shift_year_safe(date_obj, years_back):
     except ValueError:
         # Handles leap day edge case by falling back to Feb 28
         return date_obj.replace(month=2, day=28, year=date_obj.year - years_back)
+
+
+def load_dock_references():
+    try:
+        with open("dock_reference.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data.get("dock_moves", [])
+    except Exception:
+        return []
+
+
+def fetch_level_for_date(date_str: str):
+    data = fetch_json(iv_url(date_str, date_str))
+    points = extract_points(data)
+    daily = pick_closest_to_midnight_per_day(points)
+    if daily:
+        return daily[0]["value"]
+    return None
 
 
 def main():
@@ -153,6 +172,35 @@ def main():
             minv.append(None)
             maxv.append(None)
 
+    dock_moves = load_dock_references()
+    dock_references = []
+
+    for move in dock_moves:
+        date_str = move.get("date")
+        label = move.get("label", "Dock moved")
+
+        if not date_str:
+            continue
+
+        try:
+            level = fetch_level_for_date(date_str)
+            dock_references.append(
+                {
+                    "date": date_str,
+                    "label": label,
+                    "level": level,
+                }
+            )
+        except Exception as e:
+            dock_references.append(
+                {
+                    "date": date_str,
+                    "label": label,
+                    "level": None,
+                    "error": str(e),
+                }
+            )
+
     output = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
         "site": SITE,
@@ -165,6 +213,7 @@ def main():
         "successes": successes,
         "failures": failures,
         "window_details": window_details,
+        "dock_references": dock_references,
     }
 
     with open("comparison.json", "w", encoding="utf-8") as f:
@@ -176,3 +225,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
